@@ -1,0 +1,28 @@
+map:
+  - target:
+    - linux
+    files:
+    - name: dwm-session
+      to: /usr/bin/
+    - name: 00-keyboard.conf
+      to: /etc/X11/xorg.conf.d/
+    - name: .Xresources
+      to: ~/
+    - name: .xbindkeysrc
+      to: ~/
+    - name: .zshrc
+      to: ~/
+
+  - target:
+    - darwin
+    from: files/both
+    files:
+    - name: .zshrc
+      to: ~/
+      from: files/$TARGET/zshrc
+
+  - target:
+    - any
+    files:
+    - name: .vimrc
+      to: ~/
