@@ -1,0 +1,36 @@
+{
+  "common": [
+    {
+      "name": ".vimrc",
+      "target": "$HOME"
+    }
+  ],
+  "linux": [
+    {
+      "name": "dwm-session",
+      "target": "/usr/bin/"
+    },
+    {
+      "name": "00-keyboard.conf",
+      "target": "/etc/X11/xorg.conf.d/"
+    },
+    {
+      "name": ".Xresources",
+      "target": "$HOME"
+    },
+    {
+      "name": ".xbindkeysrc",
+      "target": "$HOME"
+    },
+    {
+      "name": ".zshrc",
+      "target": "$HOME"
+    }
+  ],
+  "darwin": [
+    {
+      "name": ".zshrc",
+      "target": "$HOME"
+    }
+  ]
+}
