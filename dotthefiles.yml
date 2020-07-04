@@ -15,14 +15,10 @@ map:
 
   - target:
     - darwin
-    from: files/both
     files:
     - name: .zshrc
       to: ~/
-      from: files/$TARGET/zshrc
 
-  - target:
-    - any
-    files:
+  - files:
     - name: .vimrc
       to: ~/
