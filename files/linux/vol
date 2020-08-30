@@ -1,0 +1,6 @@
+#!/bin/bash
+
+val=$1
+
+pamixer --set-volume $val
+

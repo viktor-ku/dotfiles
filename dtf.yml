@@ -14,6 +14,8 @@ map:
       to: ~/
     - name: .layout
       to: /usr/local/bin/
+    - name: vol
+      to: /usr/local/bin/
 
   - target:
     - darwin
