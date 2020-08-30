@@ -2,7 +2,7 @@
   name = Viktor Kuroljov
   email = viktor@ku.family
 [core]
-  editor = vim
+  editor = nvim
   whitespace = trailing-space,space-before-tab
 [alias]
   aa = add --all
