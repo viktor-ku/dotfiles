@@ -118,3 +118,5 @@ fi
 export ANDROID_HOME="/opt/android-sdk"
 export EDITOR="nvim"
 
+source /usr/share/autojump/autojump.zsh
+
