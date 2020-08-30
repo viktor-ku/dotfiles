@@ -1,19 +1,19 @@
-#define base00 #263238
-#define base01 #2e3c43
-#define base02 #314549
-#define base03 #546e7a
-#define base04 #b2ccd6
-#define base05 #eeffff
-#define base06 #eeffff
-#define base07 #ffffff
-#define base08 #f07178
-#define base09 #f78c6c
-#define base0A #ffcb6b
-#define base0B #c3e88d
-#define base0C #89ddff
-#define base0D #82aaff
-#define base0E #c792ea
-#define base0F #ff5370
+#define base00 #282828
+#define base01 #3c3836
+#define base02 #504945
+#define base03 #665c54
+#define base04 #bdae93
+#define base05 #d5c4a1
+#define base06 #ebdbb2
+#define base07 #fbf1c7
+#define base08 #fb4934
+#define base09 #fe8019
+#define base0A #fabd2f
+#define base0B #b8bb26
+#define base0C #8ec07c
+#define base0D #83a598
+#define base0E #d3869b
+#define base0F #d65d0e
 
 *foreground:   base05
 *background:   base00
@@ -37,52 +37,15 @@
 *color14:      base0F
 *color15:      base07
 
-! ------------------------------------------------------------------------------
-!  URxvt
-! ------------------------------------------------------------------------------
-! 
-! URxvt.cursorBlink : 0
-! URxvt.font: xft:xos4 Terminus:size=8
-! URxvt.perl-ext-common: font-size
-
-! URxvt.saveLines           : 10240
-! URxvt.lineSpace           : 1
-! URxvt.letterSpace         : 0
-! URxvt.scrollBar           : false
-! URxvt.internalBorder      : 26
-! URxvt.cursorUnderline     : false
-! URxvt.geometry            : 100x25
-! URxvt.urgentOnBell        : true
-! URxvt.thickness           : 5
-! URxvt.intensityStyles     : false
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-
-! rofi.color-enabled: true
-
-! rofi.color-window:    base00 , base00 , base00 , base00 , base03
-! rofi.color-normal:    base00 , base03 , base00 , base00 , base07
-! rofi.color-active:    base03 , base0E , base00 , base0B , base00
-! rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
-
-! rofi.hide-scrollbar: true
-! rofi.separator-style: none
-! rofi.padding: 700
-! rofi.lines: 3
-! rofi.bw: 0
-! rofi.width: 100
-
 ! Some font rendering fixings
-Xft.dpi:        96
-Xft.rgba:       rgb
-Xft.autohint:   1
-Xft.antialias:  true
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
-Xft.lcdfilter:  lcddefault
+! Xft.dpi:        96
+! Xft.rgba:       rgb
+! Xft.autohint:   1
+! Xft.antialias:  true
+! Xft.hinting:    true
+! Xft.hintstyle:  hintslight
+! Xft.lcdfilter:  lcddefault
 
-Xcursor.theme: Yaru
+! Xcursor.theme: Yaru
 Xcursor.size: 8
 
