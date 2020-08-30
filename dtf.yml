@@ -12,6 +12,8 @@ map:
       to: ~/
     - name: .zshrc
       to: ~/
+    - name: .layout
+      to: /usr/local/bin/
 
   - target:
     - darwin

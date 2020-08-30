@@ -1,32 +1,24 @@
 # Increase Volume
-"pactl set-sink-volume @DEFAULT_SINK@ +2.5%"
+"pamixer -i 3"
   XF86AudioRaiseVolume
 
 # Decrease Volume
-"pactl set-sink-volume @DEFAULT_SINK@ -2.5%"
+"pamixer -d 3"
   XF86AudioLowerVolume
 
 # Mute Volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"pamixer -t"
   XF86AudioMute
 
 # Play/Pause
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+"playerctl play-pause"
   XF86AudioPlay
 
 # Next
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+"playerctl next"
   XF86AudioNext
 
 # Previous
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+"playerctl previous"
   XF86AudioPrev
-
-# Stop
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
-  XF86AudioStop
-
-# Locks the screen
-"i3lock -eft -c 222222"
-  Shift+Mod4 + bracketright
 

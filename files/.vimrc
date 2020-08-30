@@ -84,8 +84,8 @@ set updatetime=100
 map <C-J> :tabp<Return>
 map <C-K> :tabn<Return>
 
-set listchars=tab:│\ ,nbsp:␣,trail:·,extends:>,precedes:<
-set fillchars=vert:\│
+" set listchars=tab:│\ ,nbsp:␣,trail:·,extends:>,precedes:<
+" set fillchars=vert:\│
 set hidden
 
 " 2 spaces for indent

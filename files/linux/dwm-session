@@ -12,7 +12,12 @@ xbindkeys
 pamixer --set-volume 50
 
 # Enable system wide natural scrolling (Yes, please!)
-xinput set-prop 9 283 1
+xinput set-prop 9 289 1
+xinput set-prop 9 290 1
+
+layout
+
+spotifyd
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
