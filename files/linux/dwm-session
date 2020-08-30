@@ -14,6 +14,9 @@ pamixer --set-volume 50
 # Enable system wide natural scrolling (Yes, please!)
 xinput set-prop 9 289 1
 
+# Disable mouse acceleration
+xinput set-prop 9 'libinput Accel Profile Enabled' 0, 1
+
 layout
 
 export _JAVA_AWT_WM_NONREPARENTING=1
