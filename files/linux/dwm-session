@@ -12,14 +12,8 @@ xbindkeys
 pamixer --set-volume 50
 
 mouse_id=9 # TODO: get mouse id somehow?
-
-# Enable system wide natural scrolling (Yes, please!)
-xinput set-prop $mouse_id 289 1
-
-# Disable mouse acceleration
+xinput set-prop $mouse_id 'libinput Natural Scrolling Enabled' 1
 xinput set-prop $mouse_id 'libinput Accel Profile Enabled' 0, 1
-
-# Change mouse speed
 xinput set-prop $mouse_id 'libinput Accel Speed' 0.1
 
 layout
