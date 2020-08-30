@@ -22,3 +22,5 @@ map:
   - files:
     - name: .vimrc
       to: ~/
+    - name: .gitconfig
+      to: ~/
