@@ -1,13 +1,13 @@
 # Increase Volume
-"pamixer -i 3"
+"amixer -c 0 set Master 2%+"
   XF86AudioRaiseVolume
 
 # Decrease Volume
-"pamixer -d 3"
+"amixer -c 0 set Master 2%-"
   XF86AudioLowerVolume
 
-# Mute Volume
-"pamixer -t"
+# Toggle Volume
+"amixer -c 0 set Master 1+ toggle"
   XF86AudioMute
 
 # Play/Pause
