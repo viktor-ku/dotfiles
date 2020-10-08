@@ -2,5 +2,5 @@
 
 val=$1
 
-amixer -Mc 0 set Master $val%
+pactl set-sink-volume @DEFAULT_SINK@ $val%
 
