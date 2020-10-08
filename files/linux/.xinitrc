@@ -5,9 +5,6 @@ xrdb -merge ~/.Xresources
 # Refresh rate of the keyboard
 xset r rate 150 75
 
-# Where play, stop, volume buttons gets to bind
-xbindkeys
-
 # Reset volume to 50%
 pamixer --set-volume 50
 
@@ -18,8 +15,12 @@ xinput set-prop $mouse_id 'libinput Accel Speed' 0.1
 
 layout
 
+oid --detach --workers 1
+
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 tati &
 
-exec dwm
+xbindkeys
+
+exec dbus-launch --exit-with-session dwm

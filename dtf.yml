@@ -2,8 +2,8 @@ map:
   - target:
     - linux
     files:
-    - name: dwm-session
-      to: /usr/bin/
+    - name: .xinitrc
+      to: ~/
     - name: 00-keyboard.conf
       to: /etc/X11/xorg.conf.d/
     - name: .Xresources

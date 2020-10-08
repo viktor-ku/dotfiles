@@ -1,24 +1,21 @@
 # Increase Volume
-"amixer -Mc 0 set Master 2%+"
-  XF86AudioRaiseVolume
+"pactl set-sink-volume @DEFAULT_SINK@ +2.5%"
+  Mod4 + F12
 
 # Decrease Volume
-"amixer -Mc 0 set Master 2%-"
-  XF86AudioLowerVolume
+"pactl set-sink-volume @DEFAULT_SINK@ -2.5%"
+  Mod4 + F11
 
-# Toggle Volume
-"amixer -c 0 set Master 1+ toggle"
-  XF86AudioMute
+# Mute Volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  Mod4 + F10
 
-# Play/Pause
 "playerctl play-pause"
-  XF86AudioPlay
+  Mod4 + F8
 
-# Next
 "playerctl next"
-  XF86AudioNext
+  Mod4 + F9
 
-# Previous
 "playerctl previous"
-  XF86AudioPrev
+  Mod4 + F7
 
