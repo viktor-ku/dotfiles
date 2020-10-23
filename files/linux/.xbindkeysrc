@@ -1,18 +1,29 @@
 "pactl set-sink-volume @DEFAULT_SINK@ +1%"
   Mod4 + F12
+"pactl set-sink-volume @DEFAULT_SINK@ +1%"
+  Mod2 + XF86AudioRaiseVolume
 
 "pactl set-sink-volume @DEFAULT_SINK@ -1%"
   Mod4 + F11
+"pactl set-sink-volume @DEFAULT_SINK@ -1%"
+  Mod2 + XF86AudioLowerVolume
 
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   Mod4 + F10
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  Mod2 + XF86AudioMute
 
 "playerctl play-pause"
   Mod4 + F8
+"playerctl play-pause"
+  Mod2 + XF86AudioPlay
 
 "playerctl next"
   Mod4 + F9
+"playerctl next"
+  Mod2 + XF86AudioNext
 
 "playerctl previous"
   Mod4 + F7
-
+"playerctl previous"
+  Mod2 + XF86AudioPrev
