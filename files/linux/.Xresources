@@ -1,17 +1,13 @@
-#include "/home/viktor/Code/others/base16/circus/xresources/base16-circus.Xresources"
+#include "/home/viktor/Code/Others/base16-circus-scheme/circus/xresources/base16-circus.Xresources"
 *multiClickTime: 300
 *international: true
 Xcursor.theme: default
-Xcursor.size:  8
+Xcursor.size: 4
 
-! Xft settings ---------------------------------------------------------------
-
+Xft.dpi: 96
 Xft.lcdfilter: lcddefault
 Xft.antialias:  true
 Xft.autohint:   false
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 Xft.rgba: rgb
-
-*.alpha: .95
-*.font: monospace:size=14
