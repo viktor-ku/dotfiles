@@ -12,7 +12,7 @@ map:
       to: ~/
     - name: .zshrc
       to: ~/
-    - name: .layout
+    - name: layout
       to: /usr/local/bin/
     - name: vol
       to: /usr/local/bin/

@@ -1,4 +1,4 @@
 #!/bin/sh
 
-exec mount -o gid=viktor,uid=viktor,fmask=113,dmask=002 --uuid 87F0-0E16 /mnt/hdd
+exec mount -o gid=hackers,uid=viktor,fmask=113,dmask=002 --uuid 87F0-0E16 /mnt/hdd
 
