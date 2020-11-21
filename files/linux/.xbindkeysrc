@@ -13,17 +13,17 @@
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   Mod2 + XF86AudioMute
 
-"playerctl play-pause"
+"playerctl -p spotify play-pause"
   Mod4 + F8
-"playerctl play-pause"
+"playerctl -p spotify play-pause"
   Mod2 + XF86AudioPlay
 
-"playerctl next"
+"playerctl -p spotify next"
   Mod4 + F9
-"playerctl next"
+"playerctl -p spotify next"
   Mod2 + XF86AudioNext
 
-"playerctl previous"
+"playerctl -p spotify previous"
   Mod4 + F7
-"playerctl previous"
+"playerctl -p spotify previous"
   Mod2 + XF86AudioPrev

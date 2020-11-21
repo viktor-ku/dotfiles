@@ -1,0 +1,15 @@
+#!/bin/sh
+
+function m_1 {
+  sleep 0.1 && xdotool mousemove $((2560 / 2)) $((1440 / 2)) 
+}
+
+function m_2 {
+  sleep 0.1 && xdotool mousemove $((2560 + (4096 / 2))) $((2160 / 2))
+}
+
+if [[ $1 == "1" ]]; then
+  m_1
+else 
+  m_2
+fi
