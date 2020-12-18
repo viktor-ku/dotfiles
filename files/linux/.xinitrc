@@ -5,7 +5,7 @@ xrdb -merge ~/.Xresources
 # Refresh rate of the keyboard
 xset r rate 150 75
 
-vol 50
+vol 40
 
 mouse_id=9 # TODO: get mouse id somehow? xev?
 xinput set-prop $mouse_id 'libinput Natural Scrolling Enabled' 1
