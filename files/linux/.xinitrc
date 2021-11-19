@@ -5,7 +5,7 @@ xrdb -merge ~/.Xresources
 # Refresh rate of the keyboard
 xset r rate 150 75
 
-vol 40
+vol 100
 
 mouse_id=$(xinput list --id-only "Kingsis Peripherals ZOWIE Gaming mouse")
 xinput set-prop $mouse_id 'libinput Natural Scrolling Enabled' 1
