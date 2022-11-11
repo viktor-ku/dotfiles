@@ -2,6 +2,8 @@ map:
   - target:
     - linux
     files:
+    - name: nvim
+      to: ~/.config
     - name: .xinitrc
       to: ~/
     - name: 00-keyboard.conf
@@ -24,7 +26,5 @@ map:
       to: ~/
 
   - files:
-    - name: .vimrc
-      to: ~/
     - name: .gitconfig
       to: ~/
