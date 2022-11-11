@@ -1,4 +1,4 @@
-#include "/home/viktor/Code/Others/base16-circus-scheme/circus/xresources/base16-circus.Xresources"
+#include "/home/viktor/code/others/base16-circus-scheme/circus/xresources/base16-circus.Xresources"
 *multiClickTime: 300
 *international: true
 Xcursor.theme: default

@@ -24,3 +24,5 @@
   interactive = auto
 [rerere]
   enabled = true
+[init]
+	defaultBranch = main

@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/viktor/.oh-my-zsh"
+export ZSH="/usr/share/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="ys"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -63,7 +63,8 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+	git
+	pass
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -92,22 +93,21 @@ export ARCHFLAGS="-arch x86_64"
 
 # Compilation improvements
 export PATH="/usr/lib/ccache/bin/:$PATH"
-export MAKEFLAGS="-j13 -l12"
+export MAKEFLAGS="-j33 -l32"
 
 # Node Version Manager init script
 source /usr/share/nvm/init-nvm.sh
 
-alias yaay="yay -Syu --aur"
 export PATH=$HOME/.cargo/bin:$PATH
 
 alias dco="docker-compose"
 alias gch="git submodule foreach"
 alias dlogs="docker-compose logs --tail 100 -f"
-alias x="sx /usr/bin/dwm-session"
-alias anja="telegram-desktop -many -workdir /home/viktor/Telegram-Users"
+alias puf="sudo shutdown -h now"
+alias n="nvim"
+alias l="exa --icons -al"
 
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_SESSION_TYPE="wayland"
 
 ###-tns-completion-start-###
 if [ -f /home/viktor/.tnsrc ]; then 
@@ -115,8 +115,17 @@ if [ -f /home/viktor/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 
-export ANDROID_HOME="/opt/android-sdk"
+export ANDROID_HOME="/home/viktor/Android/Sdk"
+export ANDROID_NDK_HOME="/home/viktor/Android/Sdk/ndk-bundle"
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export EDITOR="nvim"
 
 source /usr/share/autojump/autojump.zsh
 
+export JAVA_HOME="/usr/lib/jvm/java-18-openjdk"
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH="$PATH:$HOME/.pub-cache/bin"
+export PATH="$PATH:$HOME/code/others/flutter/bin"
+
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
