@@ -52,8 +52,16 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "tailwindcss",
     "pyright",
+    "cssls",
+    "tsserver"
   }
 })
+
+lspconfig.cssls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
 
 lspconfig.pyright.setup {
 	capabilities = capabilities,
