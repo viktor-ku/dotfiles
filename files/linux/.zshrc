@@ -130,5 +130,6 @@ export JAVA_HOME="/usr/lib/jvm/java-18-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/code/others/flutter/bin"
+export PATH="$PATH:$HOME/code/my/dotfiles/scripts"
 
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
