@@ -100,12 +100,15 @@ source /usr/share/nvm/init-nvm.sh
 
 export PATH=$HOME/.cargo/bin:$PATH
 
+alias park="paru -Syua"
+alias parc="paru --clean"
 alias dco="docker-compose"
 alias gch="git submodule foreach"
 alias dlogs="docker-compose logs --tail 100 -f"
 alias puf="sudo shutdown -h now"
 alias n="nvim"
 alias l="exa --icons -al"
+alias ls="exa --icons -a"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
