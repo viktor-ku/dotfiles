@@ -98,6 +98,11 @@ return require('packer').startup({function(use)
 
   use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+  }
+
 end, config = {
   package_root = vim.fn.stdpath('config') .. '/site/pack'
 }})

@@ -47,6 +47,26 @@ local lsp_flags = {
 local capabilities = require('cmp_nvim_lsp')
 	.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "tailwindcss",
+    "pyright",
+  }
+})
+
+lspconfig.pyright.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
+
+lspconfig.tailwindcss.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
+
 lspconfig.tsserver.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
