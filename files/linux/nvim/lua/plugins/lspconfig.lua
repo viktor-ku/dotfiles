@@ -53,9 +53,16 @@ require("mason-lspconfig").setup({
     "tailwindcss",
     "pyright",
     "cssls",
-    "tsserver"
+    "tsserver",
+    "astro",
   }
 })
+
+lspconfig.astro.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
 
 lspconfig.cssls.setup {
 	capabilities = capabilities,
