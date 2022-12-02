@@ -1,4 +1,0 @@
-#!/bin/sh
-
-exec mount -o gid=hackers,uid=viktor,fmask=113,dmask=002 --uuid 87F0-0E16 /mnt/hdd
-
