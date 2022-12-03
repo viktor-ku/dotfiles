@@ -42,6 +42,7 @@ ts.setup {
       '#81C784',
       '#DCE775',
       '#FFB74D',
-    }
+    },
+    disable = {"jsx", "html"}
   },
 }
