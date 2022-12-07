@@ -55,8 +55,15 @@ require("mason-lspconfig").setup({
     "cssls",
     "tsserver",
     "astro",
+    "marksman"
   }
 })
+
+lspconfig.marksman.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
 
 lspconfig.astro.setup {
 	capabilities = capabilities,
