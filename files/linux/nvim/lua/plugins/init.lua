@@ -42,6 +42,8 @@ prettier.setup({
 
 require("flutter-tools").setup{}
 
+require 'plugins.hop'
+
 return require('packer').startup({function(use) 
 	use 'wbthomason/packer.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
@@ -101,6 +103,11 @@ return require('packer').startup({function(use)
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+  }
+
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
   }
 
 end, config = {
