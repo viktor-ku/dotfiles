@@ -16,8 +16,7 @@ require('Comment').setup {
 }
 
 require('plugins.telescope')
-
-require('vgit').setup()
+require('plugins.vgit')
 
 require('null-ls').setup()
 
