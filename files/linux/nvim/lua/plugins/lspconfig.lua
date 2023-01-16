@@ -50,12 +50,14 @@ local capabilities = require('cmp_nvim_lsp')
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
-    "tailwindcss",
-    "pyright",
-    "cssls",
-    "tsserver",
+    "marksman",
     "astro",
-    "marksman"
+    "cssls",
+    "pyright",
+    "tailwindcss",
+    "tsserver",
+    "rust-analyzer",
+    "emmet_ls",
   }
 })
 
@@ -102,4 +104,18 @@ lspconfig.rust_analyzer.setup {
 	settings = {
 		["rust-analyzer"] = {}
 	}
+}
+
+lspconfig.emmet_ls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+  init_options = {
+    html = {
+      options = {
+        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+        ["bem.enabled"] = true,
+      },
+    },
+  }
 }

@@ -20,27 +20,6 @@ require('plugins.vgit')
 
 require('null-ls').setup()
 
-local prettier = require("prettier")
-prettier.setup({
-  bin = 'prettierd', -- or `'prettierd'` (v0.22+)
-  filetypes = {
-    "css",
-    "graphql",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "less",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-  },
-})
-
-require("flutter-tools").setup{}
-
 require 'plugins.hop'
 
 return require('packer').startup({function(use) 
@@ -51,6 +30,7 @@ return require('packer').startup({function(use)
   -- themes
 	use 'navarasu/onedark.nvim'
   use 'marko-cerovac/material.nvim'
+  use "rebelot/kanagawa.nvim"
 
 	use 'nvim-lua/plenary.nvim'
 
@@ -95,14 +75,19 @@ return require('packer').startup({function(use)
   }
 
   use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
-
-  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   }
+
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+        require('lspsaga').setup({})
+    end,
+  })
 
   use {
     'phaazon/hop.nvim',
