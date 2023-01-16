@@ -8,8 +8,8 @@ require('lualine').setup {
 
 require 'plugins.theme'
 
-require('plugins.lspconfig')
 require('plugins.cmp')
+require('plugins.lspconfig')
 
 require('Comment').setup {
 	basic = true,
@@ -40,11 +40,15 @@ return require('packer').startup({function(use)
 	}
 
 	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-path'
-	use 'L3MON4D3/LuaSnip'
+	use 'hrsh7th/cmp-nvim-lua'
+	use 'hrsh7th/cmp-nvim-lsp'
 	use 'saadparwaiz1/cmp_luasnip'
+  use 'onsails/lspkind.nvim'
+
+	use 'L3MON4D3/LuaSnip'
+  use "rafamadriz/friendly-snippets"
 
 	use 'numToStr/Comment.nvim'
 
@@ -101,6 +105,11 @@ return require('packer').startup({function(use)
     config = function()
         require('crates').setup()
     end,
+  }
+
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
   }
 
 end, config = {

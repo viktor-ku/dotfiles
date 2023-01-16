@@ -85,13 +85,13 @@ lspconfig.pyright.setup {
 	flags = lsp_flags,
 }
 
-lspconfig.tailwindcss.setup {
+lspconfig.tsserver.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 	flags = lsp_flags,
 }
 
-lspconfig.tsserver.setup {
+lspconfig.tailwindcss.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 	flags = lsp_flags,
