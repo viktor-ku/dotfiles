@@ -44,20 +44,20 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
-local capabilities = require('cmp_nvim_lsp')
-	.default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("mason").setup()
-require("mason-lspconfig").setup({
+require('mason-lspconfig').setup({
   ensure_installed = {
+    "tsserver",
     "marksman",
     "astro",
     "cssls",
     "pyright",
     "tailwindcss",
-    "tsserver",
-    "rust-analyzer",
+    "rust_analyzer",
     "emmet_ls",
+    "vuels",
   }
 })
 
@@ -86,6 +86,12 @@ lspconfig.pyright.setup {
 }
 
 lspconfig.tsserver.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
+
+lspconfig.vuels.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 	flags = lsp_flags,

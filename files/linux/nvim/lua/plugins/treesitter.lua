@@ -4,7 +4,7 @@ ts.setup {
 	ensure_installed = { 
     "rust", 
 
-    "typescript", "tsx", "javascript", "astro", 
+    "typescript", "tsx", "javascript", "astro",
     "vue", "svelte", "css", "graphql", 
     "html", "go", "json", "toml",
     "yaml", "sql",
@@ -24,6 +24,7 @@ ts.setup {
   },
 
 	auto_install = true,
+  sync_install = true,
 
 	highlight = {
 		enable = true,
@@ -60,7 +61,3 @@ ts.setup {
     disable = {"jsx", "html"}
   },
 }
-
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
-

@@ -8,6 +8,7 @@ require('lualine').setup {
 
 require 'plugins.theme'
 
+require('null-ls').setup()
 require('plugins.cmp')
 require('plugins.lspconfig')
 
@@ -17,8 +18,6 @@ require('Comment').setup {
 
 require('plugins.telescope')
 require('plugins.vgit')
-
-require('null-ls').setup()
 
 require 'plugins.hop'
 
@@ -30,7 +29,7 @@ return require('packer').startup({function(use)
   -- themes
 	use 'navarasu/onedark.nvim'
   use 'marko-cerovac/material.nvim'
-  use "rebelot/kanagawa.nvim"
+  -- use "rebelot/kanagawa.nvim"
 
 	use 'nvim-lua/plenary.nvim'
 

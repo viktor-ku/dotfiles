@@ -109,6 +109,7 @@ alias puf="sudo shutdown -h now"
 alias n="nvim"
 alias l="exa --icons -al"
 alias ls="exa --icons -a"
+alias cdk="npx aws-cdk"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
