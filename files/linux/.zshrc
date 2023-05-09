@@ -122,6 +122,7 @@ fi
 export ANDROID_HOME="/home/viktor/Android/Sdk"
 export ANDROID_NDK_HOME="/home/viktor/Android/Sdk/ndk-bundle"
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin/:$PATH"
 
 export EDITOR="nvim"
 
@@ -134,3 +135,4 @@ export PATH="$PATH:$HOME/code/others/flutter/bin"
 export PATH="$PATH:$HOME/code/my/dotfiles/scripts"
 
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+export EJSON_KEYDIR=~/.ejson

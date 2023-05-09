@@ -58,6 +58,7 @@ require('mason-lspconfig').setup({
     "rust_analyzer",
     "emmet_ls",
     "vuels",
+    "eslint"
   }
 })
 
@@ -98,6 +99,12 @@ lspconfig.vuels.setup {
 }
 
 lspconfig.tailwindcss.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
+
+lspconfig.eslint.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 	flags = lsp_flags,
