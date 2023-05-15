@@ -20,6 +20,7 @@ require('plugins.telescope')
 require('plugins.vgit')
 
 require 'plugins.hop'
+require 'plugins.diffview'
 
 return require('packer').startup({function(use) 
 	use 'wbthomason/packer.nvim'
@@ -32,6 +33,8 @@ return require('packer').startup({function(use)
   -- use "rebelot/kanagawa.nvim"
 
 	use 'nvim-lua/plenary.nvim'
+
+  use "sindrets/diffview.nvim" 
 
 	use {
 		'nvim-lualine/lualine.nvim',
