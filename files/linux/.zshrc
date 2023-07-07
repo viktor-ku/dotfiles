@@ -110,6 +110,8 @@ alias n="nvim"
 alias l="exa --icons -al"
 alias ls="exa --icons -a"
 alias cdk="npx aws-cdk"
+alias master="git fetch -p && git checkout master && git rebase origin/master"
+alias main="git fetch -p && git checkout main && git rebase origin/main"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -128,7 +130,7 @@ export EDITOR="nvim"
 
 source /usr/share/autojump/autojump.zsh
 
-export JAVA_HOME="/usr/lib/jvm/java-18-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-20-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/code/others/flutter/bin"
@@ -136,3 +138,7 @@ export PATH="$PATH:$HOME/code/my/dotfiles/scripts"
 
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 export EJSON_KEYDIR=~/.ejson
+
+export PATH="$PATH:/home/viktor/.local/share/coursier/bin"
+
+eval "$(rtx activate zsh)"
