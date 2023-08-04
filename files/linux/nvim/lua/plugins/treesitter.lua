@@ -17,7 +17,6 @@ ts.setup {
     "git_rebase",
     "gitignore",
     "glsl",
-    "help",
     "make",
     "markdown",
     "python",

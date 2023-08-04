@@ -10,6 +10,8 @@ require 'plugins.theme'
 
 require('null-ls').setup()
 require('plugins.cmp')
+require('plugins.neoconf')
+require('venom').setup()
 require('plugins.lspconfig')
 
 require('Comment').setup {
@@ -22,9 +24,38 @@ require('plugins.vgit')
 require 'plugins.hop'
 require 'plugins.diffview'
 
+local Path = require "plenary.path"
+
+vim.api.nvim_create_user_command("Whereami", function()
+    local abspath = vim.fn.expand("%:p")
+    local relpath = Path:new(abspath):make_relative(vim.loop.cwd())
+    
+    vim.fn.setreg("+", relpath)
+    vim.notify('Here: "' .. relpath .. '" (copied)')
+end, {})
+
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
 return require('packer').startup({function(use) 
+
 	use 'wbthomason/packer.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
+  use 'folke/neoconf.nvim'
+  use {
+    'rafi/neoconf-venom.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
 	use 'neovim/nvim-lspconfig'
 
   -- themes
@@ -113,6 +144,24 @@ return require('packer').startup({function(use)
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
+
+  use {
+    'LukasPietzschmann/telescope-tabs',
+    requires = { 'nvim-telescope/telescope.nvim' },
+    config = function()
+      require'telescope-tabs'.setup {
+        -- Your custom config :^)
+      }
+    end
+  }
+
+  use "b0o/schemastore.nvim"
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 
 end, config = {
   package_root = vim.fn.stdpath('config') .. '/site/pack'
