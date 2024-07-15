@@ -17,6 +17,7 @@
   pp = push
   diffc = diff --cached
   pum = push --set-upstream origin master
+  mr = push --set-upstream origin HEAD
 [push]
   default = simple
 [color]
