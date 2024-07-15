@@ -1,21 +1,10 @@
-local material = require('material')
-local colors = require 'material.colors'
+return {
+  { "loctvl842/monokai-pro.nvim" },
 
-material.setup {
-  lualine_style = 'stealth',
-
-  plugins = { 
-    -- check out the docs to see all supported plugins
-    "nvim-cmp",
-    "telescope",
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "monokai-pro",
+    },
   },
-
-  async_loading = true,
 }
-
-vim.g.material_style = 'darker'
-
-vim.cmd 'colorscheme material'
-
--- require('kanagawa').setup()
--- vim.cmd("colorscheme kanagawa")

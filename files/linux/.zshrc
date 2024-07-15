@@ -112,6 +112,9 @@ alias ls="exa --icons -a"
 alias cdk="npx aws-cdk"
 alias master="git fetch -p && git checkout master && git rebase origin/master"
 alias main="git fetch -p && git checkout main && git rebase origin/main"
+alias cs="xclip -selection clipboard"
+alias staging="git branch -D staging && git checkout -b staging && g push -u origin staging -f"
+alias ns="n -S"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -141,4 +144,4 @@ export EJSON_KEYDIR=~/.ejson
 
 export PATH="$PATH:/home/viktor/.local/share/coursier/bin"
 
-eval "$(rtx activate zsh)"
+eval "$(mise activate zsh)"
