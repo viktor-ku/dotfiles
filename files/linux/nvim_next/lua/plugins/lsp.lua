@@ -2,7 +2,7 @@
 
 local M = {}
 
-M.on_attach = function(_, buf)
+M.on_attach = function(client, buf)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local opts = { noremap = true, silent = true, buffer = buf }
@@ -14,14 +14,6 @@ M.on_attach = function(_, buf)
   vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
   vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
   vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-
-  vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-  vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-  vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
-  -- try Telescope diagnostics
-  vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", opts)
-  -- C-q to put all of errors to quick fix list
 
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
@@ -119,21 +111,31 @@ return {
         local server_opts = vim.tbl_deep_extend("force", {
           capabilities = vim.deepcopy(capabilities),
           on_attach = M.on_attach,
+          handlers = {
+            ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+              virtual_text = false,
+              signs = false,
+            }),
+          },
         }, servers[server])
 
         if server_opts.enabled == false then
           return
         end
 
-        if opts.setup[server] then
-          if opts.setup[server](server, server_opts) then
+        local setup_fn = opts.setup[server]
+        local setup_all_fn = opts.setup["*"]
+
+        if setup_fn then
+          if setup_fn(server, server_opts) then
             return
           end
-        elseif opts.setup["*"] then
-          if opts.setup["*"](server, server_opts) then
+        elseif setup_all_fn then
+          if setup_all_fn(server, server_opts) then
             return
           end
         end
+
         require("lspconfig")[server].setup(server_opts)
       end
 
@@ -165,5 +167,12 @@ return {
         })
       end
     end,
+  },
+
+  {
+    "ray-x/lsp_signature.nvim",
+    opts = {
+      hint_enable = false,
+    },
   },
 }

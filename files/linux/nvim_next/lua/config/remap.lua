@@ -7,8 +7,6 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 
-vim.o.termguicolors = true
-
 vim.o.number = true
 
 vim.o.swapfile = false
@@ -18,4 +16,7 @@ vim.o.incsearch = false
 vim.o.hlsearch = false
 vim.wo.signcolumn = "yes"
 
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.opt.termguicolors = true
+vim.o.termguicolors = true
+
+vim.g.loaded_netrwPlugin = 0

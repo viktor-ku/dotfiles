@@ -3,8 +3,7 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
     defaults = {
-      prompt_prefix = "🔍",
-      selection_caret = "➰",
+      prompt_prefix = "🔍 ",
       path_display = function(opts, path)
         local tail = require("telescope.utils").path_tail(path)
         path = string.format("%s (%s)", tail, path)
