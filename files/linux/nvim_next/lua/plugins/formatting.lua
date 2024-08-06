@@ -1,20 +1,22 @@
-local prettier = { { "prettierd", "prettier" } }
+local M = {}
+
+M.prettier = { "prettierd", "prettier", stop_after_first = true }
 
 return {
   "stevearc/conform.nvim",
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     formatters_by_ft = {
-      javascript = prettier,
-      typescript = prettier,
-      javascriptreact = prettier,
-      typescriptreact = prettier,
-      svelte = prettier,
-      css = prettier,
-      html = prettier,
-      json = prettier,
-      yaml = prettier,
-      markdown = prettier,
+      javascript = M.prettier,
+      typescript = M.prettier,
+      javascriptreact = M.prettier,
+      typescriptreact = M.prettier,
+      svelte = M.prettier,
+      css = M.prettier,
+      html = M.prettier,
+      json = M.prettier,
+      yaml = M.prettier,
+      markdown = M.prettier,
       lua = { "stylua" },
       python = function(bufnr)
         if require("conform").get_formatter_info("ruff_format", bufnr).available then
@@ -25,9 +27,7 @@ return {
       end,
     },
     format_after_save = {
-      lsp_fallback = false,
       async = true,
-      timeout_ms = 0,
     },
   },
   keys = {
@@ -35,9 +35,7 @@ return {
       "<leader>mp",
       function()
         require("conform").format({
-          lsp_fallback = true,
-          async = false,
-          timeout_ms = 500,
+          async = true,
         })
       end,
       desc = "Format buffer",

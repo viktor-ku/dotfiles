@@ -1,5 +1,3 @@
--- https://www.lazyvim.org/plugins/lsp#masonnvim-1
-
 local M = {}
 
 M.on_attach = function(client, buf)
@@ -7,7 +5,6 @@ M.on_attach = function(client, buf)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local opts = { noremap = true, silent = true, buffer = buf }
 
-  -- C-t to go back (check neovim tags tack)
   vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
@@ -21,27 +18,52 @@ M.on_attach = function(client, buf)
   vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 end
 
+M.lsp_tools = {
+  "marksman",
+  "astro",
+  "cssls",
+  "rust_analyzer",
+  "emmet_ls",
+  "vuels",
+  "jsonls",
+  "zls",
+  "lua_ls",
+  "tailwindcss",
+  "eslint",
+  "vtsls",
+}
+
+M.linter_tools = {
+  "eslint_d",
+}
+
+M.formatter_tools = {
+  "stylua",
+  "shfmt",
+  "prettierd",
+}
+
+M.other_tools = function()
+  List = require("plenary.collections.py_list")
+  local linter_tools = List(M.linter_tools)
+  local formatter_tools = List(M.formatter_tools)
+  local tools = linter_tools:concat(formatter_tools)
+  return tools
+end
+
 return {
   { "williamboman/mason-lspconfig.nvim", config = function() end },
 
   {
-
     "williamboman/mason.nvim",
     cmd = "Mason",
     build = ":MasonUpdate",
-    opts_extend = { "ensure_installed" },
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "shfmt",
-        "prettierd",
-        "eslint_d",
-      },
-    },
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function(_, opts)
       require("mason").setup(opts)
 
       local mr = require("mason-registry")
+
       mr:on("package:install:success", function()
         vim.defer_fn(function()
           -- trigger FileType event to possibly load this newly installed LSP server
@@ -53,7 +75,7 @@ return {
       end)
 
       mr.refresh(function()
-        for _, name in ipairs(opts.ensure_installed) do
+        for _, name in ipairs(M.other_tools()) do
           local p = mr.get_package(name)
           if not p:is_installed() then
             p:install()
@@ -65,114 +87,31 @@ return {
 
   {
     "neovim/nvim-lspconfig",
-    opts = function()
-      ---@class PluginLspOpts
-      local ret = {
-        document_highlight = {
-          enabled = true,
-        },
-        capabilities = {},
-        servers = {
-          marksman = {},
-          astro = {},
-          cssls = {},
-          tailwindcss = {},
-          rust_analyzer = {},
-          emmet_ls = {},
-          vuels = {},
-          eslint = {},
-          jsonls = {},
-          zls = {},
-          vtsls = {},
-          lua_ls = {},
-        },
-        setup = {},
-      }
-
-      return ret
-    end,
-    ---@param opts PluginLspOpts
-    config = function(_, opts)
-      vim.diagnostic.config(vim.deepcopy(opts.diagnostics))
-
-      local servers = opts.servers
-
-      local has_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+    config = function()
+      local have_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+      local have_mason, mlsp = pcall(require, "mason-lspconfig")
 
       local capabilities = vim.tbl_deep_extend(
         "force",
         {},
         vim.lsp.protocol.make_client_capabilities(),
-        has_cmp and cmp_nvim_lsp.default_capabilities() or {},
-        opts.capabilities or {}
+        have_cmp and cmp_nvim_lsp.default_capabilities() or {}
       )
 
-      local function setup(server)
-        local server_opts = vim.tbl_deep_extend("force", {
-          capabilities = vim.deepcopy(capabilities),
-          on_attach = M.on_attach,
-          handlers = {
-            ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-              virtual_text = false,
-              signs = false,
-            }),
-          },
-        }, servers[server])
+      local server_opts = {
+        capabilities = capabilities,
+        on_attach = M.on_attach,
+      }
 
-        if server_opts.enabled == false then
-          return
-        end
-
-        local setup_fn = opts.setup[server]
-        local setup_all_fn = opts.setup["*"]
-
-        if setup_fn then
-          if setup_fn(server, server_opts) then
-            return
-          end
-        elseif setup_all_fn then
-          if setup_all_fn(server, server_opts) then
-            return
-          end
-        end
-
+      for _, server in ipairs(M.lsp_tools) do
         require("lspconfig")[server].setup(server_opts)
-      end
-
-      local have_mason, mlsp = pcall(require, "mason-lspconfig")
-      local all_mslp_servers = {}
-      if have_mason then
-        all_mslp_servers = vim.tbl_keys(require("mason-lspconfig.mappings.server").lspconfig_to_package)
-      end
-
-      local ensure_installed = {} ---@type string[]
-      for server, server_opts in pairs(servers) do
-        if server_opts then
-          server_opts = server_opts == true and {} or server_opts
-          if server_opts.enabled ~= false then
-            -- run manual setup if mason=false or if this is a server that cannot be installed with mason-lspconfig
-            if server_opts.mason == false or not vim.tbl_contains(all_mslp_servers, server) then
-              setup(server)
-            else
-              ensure_installed[#ensure_installed + 1] = server
-            end
-          end
-        end
       end
 
       if have_mason then
         mlsp.setup({
-          ensure_installed = ensure_installed,
-          handlers = { setup },
+          ensure_installed = M.lsp_tools,
         })
       end
     end,
-  },
-
-  {
-    "ray-x/lsp_signature.nvim",
-    opts = {
-      hint_enable = false,
-    },
   },
 }
