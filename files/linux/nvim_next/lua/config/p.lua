@@ -1,15 +1,5 @@
-List = require("plenary.collections.py_list")
+print(vim.api.nvim_get_current_buf())
 
-M = {}
-
-M.linter_tools = {
-  "eslint_d",
-}
-
-M.formatter_tools = {
-  "stylua",
-  "shfmt",
-  "prettierd",
-}
-
-print(List(M.linter_tools))
+local function enable_inlay_hint()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end

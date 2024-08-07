@@ -43,6 +43,50 @@ M.formatter_tools = {
   "prettierd",
 }
 
+M.handlers = {
+  vtsls = function()
+    local lang_settings = {
+      updateImportsOnFileMove = { enabled = "always" },
+      suggest = {
+        completeFunctionCalls = true,
+      },
+      inlayHints = {
+        enumMemberValues = { enabled = true },
+        functionLikeReturnTypes = { enabled = true },
+        parameterNames = { enabled = "literals" },
+        parameterTypes = { enabled = true },
+        propertyDeclarationTypes = { enabled = true },
+        variableTypes = { enabled = false },
+      },
+    }
+
+    return {
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx",
+      },
+      settings = {
+        complete_function_calls = true,
+        vtsls = {
+          enableMoveToFileCodeAction = true,
+          autoUseWorkspaceTsdk = true,
+          experimental = {
+            completion = {
+              enableServerSideFuzzyMatch = true,
+            },
+          },
+        },
+        typescript = lang_settings,
+        javascript = lang_settings,
+      },
+    }
+  end,
+}
+
 M.other_tools = function()
   List = require("plenary.collections.py_list")
   local linter_tools = List(M.linter_tools)
@@ -104,7 +148,10 @@ return {
       }
 
       for _, server in ipairs(M.lsp_tools) do
-        require("lspconfig")[server].setup(server_opts)
+        local handler = M.handlers[server]
+        local this_server_opts = handler and handler() or {}
+        local opts = vim.tbl_deep_extend("force", server_opts, this_server_opts)
+        require("lspconfig")[server].setup(opts)
       end
 
       if have_mason then

@@ -97,6 +97,8 @@ return {
 
       local configs = require("nvim-treesitter.configs")
 
+      vim.treesitter.language.register("html", "handlebars")
+
       configs.setup(opts)
     end,
   },

@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   opts = {
     preset = "classic",
-    delay = 300,
+    delay = 500,
   },
   keys = {
     {
