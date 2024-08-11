@@ -1,26 +1,38 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+local opt = vim.opt
+local o = vim.o
+local g = vim.g
 
-vim.o.swapfile = false
+-------------------------------------- globals ------------------------------------------
 
-vim.o.updatetime = 300
-vim.o.incsearch = false
-vim.o.hlsearch = false
+g.mapleader = " "
+g.maplocalleader = "\\"
+g.loaded_netrwPlugin = 0
+g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
+g.markdown_recommended_style = 0
 
-vim.o.termguicolors = true
+-- disable some default providers
+g.loaded_node_provider = 0
+g.loaded_python3_provider = 0
+g.loaded_perl_provider = 0
+g.loaded_ruby_provider = 0
 
-vim.g.loaded_netrwPlugin = 0
+-------------------------------------- options ------------------------------------------
 
-vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
+o.swapfile = false
+o.updatetime = 300
+o.incsearch = false
+o.hlsearch = false
+o.cursorline = true
+o.cursorlineopt = "number"
+o.numberwidth = 2
+o.ruler = false
 
--- validated (opt)
---
-vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
-vim.opt.completeopt = "menu,menuone,noselect"
-vim.opt.conceallevel = 2
-vim.opt.confirm = true
-vim.opt.expandtab = true -- spaces instead of tabs
-vim.opt.fillchars = {
+opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
+opt.completeopt = "menu,menuone,noselect"
+opt.conceallevel = 2
+opt.confirm = true
+opt.expandtab = true -- spaces instead of tabs
+opt.fillchars = {
   foldopen = "",
   foldclose = "",
   fold = " ",
@@ -28,43 +40,38 @@ vim.opt.fillchars = {
   diff = "╱",
   eob = " ",
 }
-vim.opt.foldlevel = 99
-vim.opt.grepformat = "%f:%l:%c:%m"
-vim.opt.grepprg = "rg --vimgrep"
-vim.opt.ignorecase = true -- Ignore case
-vim.opt.inccommand = "nosplit" -- preview incremental substitute
-vim.opt.jumpoptions = "view"
-vim.opt.laststatus = 3 -- global statusline
-vim.opt.linebreak = true -- Wrap lines at convenient points
-vim.opt.list = true -- Show some invisible characters (tabs...
-vim.opt.number = true -- print line number
-vim.opt.pumblend = 10 -- Popup blend
-vim.opt.pumheight = 10 -- Maximum number of entries in a popup
-vim.opt.scrolloff = 8 -- Lines of context
-vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
-vim.opt.shiftround = true -- Round indent
-vim.opt.shiftwidth = 2 -- size of an indent
-vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
-vim.opt.showmode = false -- Dont show mode since we have a statusline
-vim.opt.sidescrolloff = 8 -- Columns of context
-vim.opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
-vim.opt.smartcase = true -- Don't ignore case with capitals
-vim.opt.smartindent = true -- Insert indents automatically
-vim.opt.spelllang = { "en" }
-vim.opt.spelloptions:append("noplainbuffer")
-vim.opt.splitbelow = true -- Put new windows below current
-vim.opt.splitkeep = "screen"
-vim.opt.splitright = true -- Put new windows right of current
-vim.opt.tabstop = 2 -- Number of spaces tabs count for
-vim.opt.termguicolors = true
-vim.opt.undofile = true
-vim.opt.undolevels = 10000
-vim.opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
-vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
-vim.opt.winminwidth = 5 -- Minimum window width
-vim.opt.wrap = false -- Disable line wrap
-
--- yet to be
-
-vim.opt.softtabstop = 2
-vim.g.markdown_recommended_style = 0
+opt.foldlevel = 99
+opt.grepformat = "%f:%l:%c:%m"
+opt.grepprg = "rg --vimgrep"
+opt.ignorecase = true -- Ignore case
+opt.smartcase = true -- Don't ignore case with capitals
+opt.inccommand = "nosplit" -- preview incremental substitute
+opt.jumpoptions = "view"
+opt.laststatus = 3 -- global statusline
+opt.linebreak = true -- Wrap lines at convenient points
+opt.list = true -- Show some invisible characters (tabs...
+opt.number = true -- print line number
+opt.pumblend = 10 -- Popup blend
+opt.pumheight = 10 -- Maximum number of entries in a popup
+opt.scrolloff = 8 -- Lines of context
+opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
+opt.shiftround = true -- Round indent
+opt.shiftwidth = 2 -- size of an indent
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
+opt.showmode = false -- Dont show mode since we have a statusline
+opt.sidescrolloff = 8 -- Columns of context
+opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
+opt.smartindent = true -- Insert indents automatically
+opt.spelllang = { "en" }
+opt.spelloptions:append("noplainbuffer")
+opt.splitbelow = true -- Put new windows below current
+opt.splitkeep = "screen"
+opt.splitright = true -- Put new windows right of current
+opt.tabstop = 2 -- Number of spaces tabs count for
+opt.undofile = true
+opt.undolevels = 10000
+opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
+opt.wildmode = "longest:full,full" -- Command-line completion mode
+opt.winminwidth = 5 -- Minimum window width
+opt.wrap = false -- Disable line wrap
+opt.softtabstop = 2

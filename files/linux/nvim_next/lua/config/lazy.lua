@@ -17,6 +17,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("config.remap")
 
+vim.api.nvim_create_user_command("Whereami", function()
+  local Path = require("plenary.path")
+  local abspath = vim.fn.expand("%:p")
+  local relpath = Path:new(abspath):make_relative(vim.loop.cwd())
+
+  vim.fn.setreg("+", relpath)
+  vim.notify('Here: "' .. relpath .. '" (copied)')
+end, {})
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {

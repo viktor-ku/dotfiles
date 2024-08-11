@@ -16,3 +16,6 @@ end, {})
 local bufnr = vim.fn.bufnr(name, false)
 
 local buf_path = vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf())
+
+local bufnr = vim.api.nvim_get_current_buf()
+vim.api.nvim_buf_delete(bufnr, { force = false })
