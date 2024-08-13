@@ -63,8 +63,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	pass
+  git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -95,21 +94,22 @@ export ARCHFLAGS="-arch x86_64"
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export MAKEFLAGS="-j33 -l32"
 
-# Node Version Manager init script
-source /usr/share/nvm/init-nvm.sh
-
 export PATH=$HOME/.cargo/bin:$PATH
 
 alias park="paru -Syua"
 alias parc="paru --clean"
-alias dco="docker-compose"
+alias dco="docker compose"
+alias dlogs="docker compose logs --tail 100 -f"
 alias gch="git submodule foreach"
-alias dlogs="docker-compose logs --tail 100 -f"
-alias puf="sudo shutdown -h now"
 alias n="nvim"
-alias l="exa --icons -al"
-alias ls="exa --icons -a"
+alias ns="nvim -S"
+alias l="eza --icons -al"
+alias ls="eza --icons -a"
 alias cdk="npx aws-cdk"
+alias master="git fetch -p && git checkout master && git rebase origin/master"
+alias main="git fetch -p && git checkout main && git rebase origin/main"
+alias staging="git branch -D staging && git checkout -b staging && g push -u origin staging -f"
+alias cs="xclip -selection clipboard"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -122,15 +122,20 @@ fi
 export ANDROID_HOME="/home/viktor/Android/Sdk"
 export ANDROID_NDK_HOME="/home/viktor/Android/Sdk/ndk-bundle"
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin/:$PATH"
+export PATH="$PATH:$HOME/code/my/dotfiles/scripts"
 
 export EDITOR="nvim"
 
 source /usr/share/autojump/autojump.zsh
 
-export JAVA_HOME="/usr/lib/jvm/java-18-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-20-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:$HOME/.pub-cache/bin"
-export PATH="$PATH:$HOME/code/others/flutter/bin"
-export PATH="$PATH:$HOME/code/my/dotfiles/scripts"
 
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+export EJSON_KEYDIR=~/.ejson
+
+export PATH="$PATH:/home/viktor/.local/share/coursier/bin"
+
+eval "$(mise activate zsh)"

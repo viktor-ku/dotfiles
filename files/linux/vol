@@ -1,6 +1,0 @@
-#!/bin/bash
-
-val=$1
-
-pactl set-sink-volume @DEFAULT_SINK@ $val%
-

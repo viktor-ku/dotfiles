@@ -1,2 +1,0 @@
-require("vars")
-require('plugins')
