@@ -15,10 +15,12 @@ return {
       vue = M.prettier,
       css = M.prettier,
       html = M.prettier,
+      xml = M.prettier,
       handlebars = M.prettier,
       json = M.prettier,
       yaml = M.prettier,
       markdown = M.prettier,
+      astro = M.prettier,
       lua = { "stylua" },
       python = function(bufnr)
         if require("conform").get_formatter_info("ruff_format", bufnr).available then

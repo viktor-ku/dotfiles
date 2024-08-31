@@ -47,11 +47,9 @@ M.attach_mappings = function(name)
     if name == "buffers" then
       map({ "i", "n" }, "<C-D>", function(buf)
         actions.delete_buffer(buf)
-        actions.move_to_top(buf)
       end, { desc = "Delete buffer" })
       map({ "n" }, "d", function(buf)
         actions.delete_buffer(buf)
-        actions.move_to_top(buf)
       end, { desc = "Delete buffer" })
     end
 

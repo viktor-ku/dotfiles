@@ -51,6 +51,14 @@ return {
   end,
   keys = {
     {
+      "<leader>hc",
+      function()
+        local harpoon = require("harpoon")
+        harpoon:list():clear()
+      end,
+      desc = "Clear all",
+    },
+    {
       "<leader>ha",
       function()
         local harpoon = require("harpoon")
