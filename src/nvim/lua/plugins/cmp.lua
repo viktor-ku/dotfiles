@@ -1,6 +1,7 @@
 return {
   {
     "hrsh7th/nvim-cmp",
+    lazy = false,
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-path",
@@ -9,6 +10,8 @@ return {
       local cmp = require("cmp")
 
       cmp.setup({
+        snippet = nil,
+
         mapping = cmp.mapping.preset.insert({
           ["<C-k>"] = cmp.mapping.select_prev_item(),
           ["<C-j>"] = cmp.mapping.select_next_item(),
@@ -23,6 +26,15 @@ return {
           { name = "nvim_lsp" },
           { name = "path" },
         }),
+
+        window = {
+          completion = cmp.config.window.bordered({
+            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+          }),
+          documentation = cmp.config.window.bordered({
+            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu",
+          }),
+        },
       })
     end,
   },

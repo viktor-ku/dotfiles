@@ -75,7 +75,9 @@ local function default_capabilities()
     applyEdit = true,
   }
 
-  return caps
+  local cmp_caps = require("cmp_nvim_lsp").default_capabilities(caps)
+
+  return cmp_caps
 end
 
 vim.lsp.config("*", {

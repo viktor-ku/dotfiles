@@ -2,6 +2,12 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
+vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+vim.o.pumblend = 0 -- popup menu (cmp)
+vim.o.winblend = 0 -- floating windows (docs, etc.)
+
 -------------------------------------- globals ------------------------------------------
 
 g.mapleader = " "

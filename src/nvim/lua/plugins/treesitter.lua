@@ -92,32 +92,30 @@ M.install = {
   "zig",
 }
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.env", ".env.*" },
+  callback = function()
+    vim.bo.filetype = "toml"
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "<filetype>" },
+  callback = function()
+    vim.treesitter.start()
+  end,
+})
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
-    branch = "master",
+    branch = "main",
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = M.install,
-        auto_install = true,
-        sync_install = false,
-        highlight = {
-          enable = true,
-        },
-        modules = {},
-        ignore_install = {},
-        parser_install_dir = nil,
-        additional_vim_regex_highlighting = false,
-      })
+      local ts = require("nvim-treesitter")
 
-      vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-        pattern = { "*.env", ".env.*" },
-        callback = function()
-          vim.bo.filetype = "toml"
-        end,
-      })
+      ts.install(M.install)
     end,
   },
 
