@@ -22,6 +22,7 @@ return {
       markdown = M.prettier,
       astro = M.prettier,
       lua = { "stylua" },
+      rust = { "rustfmt", lsp_format = "fallback" },
       python = function(bufnr)
         if require("conform").get_formatter_info("ruff_format", bufnr).available then
           return { "ruff_format" }
