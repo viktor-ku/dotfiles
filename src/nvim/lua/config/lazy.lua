@@ -16,6 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("config.remap")
+require("config.term")
 
 vim.api.nvim_create_user_command("Whereami", function()
   local Path = require("plenary.path")

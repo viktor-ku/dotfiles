@@ -31,6 +31,7 @@ o.hlsearch = false
 o.cursorline = false
 o.ruler = false
 o.numberwidth = 2
+o.termguicolors = true
 
 opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 opt.background = "dark"

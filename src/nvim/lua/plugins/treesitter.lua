@@ -72,6 +72,7 @@ M.install = {
   "superhtml",
   "svelte",
   "sway",
+  "sql",
   "terraform",
   "tmux",
   "toml",
@@ -100,7 +101,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "<filetype>" },
+  pattern = M.install,
   callback = function()
     vim.treesitter.start()
   end,

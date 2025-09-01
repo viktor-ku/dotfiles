@@ -27,7 +27,8 @@ local function default_on_attach(client, bufnr)
       buffer = bufnr,
       callback = vim.lsp.codelens.refresh,
     })
-    vim.lsp.codelens.refresh()
+
+    vim.lsp.codelens.refresh({ bufnr = 0 })
   end
 end
 
