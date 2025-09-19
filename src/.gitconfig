@@ -2,13 +2,13 @@
   name = Viktor Kuroljov
   email = viktor@ku.family
 [core]
-  editor = nvim
   whitespace = trailing-space,space-before-tab
+  excludesfile = ~/global.gitignore
+[help]
+  autocorrect = 25
 [alias]
   aa = add --all
-  au = add -u
   s = status
-  ss = status -s
   ch = checkout
   cm = commit
   b = branch
@@ -16,14 +16,10 @@
   lg = log --oneline --all --decorate --graph
   pp = push
   diffc = diff --cached
-  pum = push --set-upstream origin master
   mr = push --set-upstream origin HEAD
 [push]
   default = simple
-[color]
-  ui = auto
-  interactive = auto
 [rerere]
   enabled = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
