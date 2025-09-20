@@ -4,8 +4,9 @@ require("theme")
 require("lsp_default")
 
 local lib = require("lib")
+local config_dir = vim.fn.stdpath("config")
 
-for name, ftype in vim.fs.dir("lua/plugins") do
+for name, ftype in vim.fs.dir(vim.fs.joinpath(config_dir, "lua", "plugins")) do
   if ftype == "file" then
     local lua_ext = name:sub(-4)
 
@@ -28,7 +29,7 @@ for name, ftype in vim.fs.dir("lua/plugins") do
   end
 end
 
-for name, ftype in vim.fs.dir("lsp") do
+for name, ftype in vim.fs.dir(vim.fs.joinpath(config_dir, "lsp")) do
   if ftype == "file" then
     local lua_ext = name:sub(-4)
 
