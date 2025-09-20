@@ -12,6 +12,7 @@ vim.pack.add({
   add("https://github.com/nvim-telescope/telescope.nvim", "b4da76be54691e854d3e0e02c36b0245f945c2c7"),
   add("https://github.com/nvim-telescope/telescope-fzf-native.nvim", "1f08ed60cafc8f6168b72b80be2b2ea149813e55"),
 
+  add("https://github.com/folke/flash.nvim", "b68bda044d68e4026c4e1ec6df3c5afd7eb8e341"),
   add("https://github.com/ThePrimeagen/harpoon", "ed1f853847ffd04b2b61c314865665e1dadf22c7"),
   add("https://github.com/stevearc/oil.nvim", "07f80ad645895af849a597d1cac897059d89b686"),
   add("https://github.com/folke/which-key.nvim", "370ec46f710e058c9c1646273e6b225acf47cbed"),

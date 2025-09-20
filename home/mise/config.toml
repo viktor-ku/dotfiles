@@ -1,6 +1,11 @@
 [tools]
 node = "24"
-"npm:@vtsls/language-server" = "*"
+"npm:@vtsls/language-server" = "latest"
+"npm:@olrtg/emmet-language-server" = "latest"
+"npm:fish-lsp" = "latest"
+"npm:pyright" = "latest"
+"npm:@tailwindcss/language-server" = "latest"
+"go:github.com/sqls-server/sqls" = "latest"
 
 [settings]
 # configure `mise install` to always keep the downloaded archive
