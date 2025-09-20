@@ -1,10 +1,10 @@
-vim.lsp.config('*', {
+vim.lsp.config("*", {
   capabilities = {
     textDocument = {
       semanticTokens = {
         multilineTokenSupport = true,
-      }
-    }
+      },
+    },
   },
-  root_markers = { '.git' },
+  root_markers = { ".git" },
 })

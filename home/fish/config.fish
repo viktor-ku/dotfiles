@@ -1,10 +1,6 @@
 set -Ux LANG en_US.UTF-8
 set -Ux ARCHFLAGS "-arch x86_64"
-
-set -Ux PATH "/usr/lib/ccache/bin/:$PATH"
 set -Ux MAKEFLAGS "-j33 -l32"
-
-set -Ux PATH $HOME/.cargo/bin:$PATH
 
 fish_add_path --append --path $HOME/.cargo/bin
 
@@ -29,12 +25,6 @@ alias aco="clear && RUSTFLAGS=\"-Awarnings\" cargo"
 alias cun="aco run --"
 
 set -Ux XDG_CONFIG_HOME "$HOME/.config"
-
-###-tns-completion-start-###
-#if [ -f /home/viktor/.tnsrc ]; then 
-#    source /home/viktor/.tnsrc 
-#fi
-###-tns-completion-end-###
 
 #export ANDROID_HOME="/home/viktor/Android/Sdk"
 #export ANDROID_NDK_HOME="/home/viktor/Android/Sdk/ndk-bundle"

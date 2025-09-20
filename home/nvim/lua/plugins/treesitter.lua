@@ -74,5 +74,5 @@ return {
       "yaml",
     })
     require("nvim-treesitter").update()
-  end
+  end,
 }
