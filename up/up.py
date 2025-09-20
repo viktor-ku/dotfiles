@@ -38,7 +38,7 @@ def main():
     print("The plan is to create the following symlinks:")
 
     todo = []
-    for (src, dest) in links:
+    for src, dest in links:
         status = ""
 
         if is_symlink_exists(dest):
@@ -55,7 +55,7 @@ def main():
     if not user_agreed():
         exit(0)
 
-    for (src, dest) in todo:
+    for src, dest in todo:
         safe_unlink(dest)
         os.symlink(src, dest)
 
