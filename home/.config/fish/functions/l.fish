@@ -1,3 +1,3 @@
-function l --wraps='eza --icons -al' --description 'alias l=eza --icons -al'
-  eza --icons -al $argv
+function l
+  eza --long --icons auto --all --sort name --group-directories-first --binary --group --git-repos $argv
 end
