@@ -1,3 +1,3 @@
-function g
-	git $argv
+function g --wraps=git --description 'alias g=git'
+  git $argv
 end
