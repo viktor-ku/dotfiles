@@ -48,3 +48,17 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     pcall(vim.treesitter.start)
   end,
 })
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.env", ".env.*" },
+  callback = function()
+    vim.bo.filetype = "toml"
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.conf" },
+  callback = function()
+    vim.bo.filetype = "toml"
+  end,
+})
