@@ -1,22 +1,21 @@
 configuration{
     modi: "run,drun,window";
-    lines: 5;
-    font: "CozetteVector Nerd Font 13";
+    lines: 8;
+    font: "0xProto Nerd Font Mono 14";
     show-icons: true;
     icon-theme: "Oranchelo";
-    terminal: "st";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: "   Window";
-    /* display-Network: " 󰤨  Network"; */
+    display-drun: " Apps";
+    display-run: " Run";
+    display-window: " Window";
     sidebar-mode: true;
 }
 
-@theme "carbon"
+@theme "gruvchad"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -24,8 +23,8 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 360px;
-    border: 3px;
+    height: 500px;
+    border: 1px;
     border-color: @border-col;
     background-color: @bg-col;
 }
@@ -37,15 +36,15 @@ mainbox {
 inputbar {
     children: [prompt,entry];
     background-color: @bg-col;
-    border-radius: 5px;
-    padding: 2px;
+    border-radius: 0;
+    padding: 4px;
 }
 
 prompt {
     background-color: @blue;
-    padding: 6px;
+    padding: 9px 16px 10px 15px;
     text-color: @bg-col;
-    border-radius: 3px;
+    border-radius: 8px;
     margin: 20px 0px 0px 20px;
 }
 
@@ -55,24 +54,24 @@ textbox-prompt-colon {
 }
 
 entry {
-    padding: 6px;
-    margin: 20px 0px 0px 10px;
+    padding: 9px 16px 10px 0;
+    margin: 20px 0px 0px 20px;
     text-color: @fg-col;
     background-color: @bg-col;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
-    columns: 2;
+    border: 0;
+    padding: 20px 20px 10px;
+    margin: 0;
+    columns: 1;
     background-color: @bg-col;
 }
 
 element {
-    padding: 5px;
+    padding: 8px;
     background-color: @bg-col;
-    text-color: @fg-col  ;
+    text-color: @fg-col;
 }
 
 element-icon {
@@ -81,19 +80,19 @@ element-icon {
 
 element selected {
     background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+    text-color: @fg-col2;
 }
 
 mode-switcher {
     spacing: 0;
-  }
+}
 
 button {
-    padding: 10px;
+    padding: 16px 24px 15px;
     background-color: @bg-col-light;
     text-color: @grey;
-    vertical-align: 0.5; 
-    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    horizontal-align: 0;
 }
 
 button selected {
