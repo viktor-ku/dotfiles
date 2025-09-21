@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import sys
 import stat
@@ -35,16 +37,29 @@ def main():
 
             links.append((src, dest))
 
-    print("The plan is to create the following symlinks:")
+    force = False
+    for it in sys.argv:
+        if it == "--force":
+            force = True
+            break
+
+    if force:
+        print("The plan is to create the following symlinks with force:")
+    else:
+        print("The plan is to create the following symlinks:")
 
     todo = []
     for src, dest in links:
         status = ""
 
-        if is_symlink_exists(dest):
-            status = " (skip, already exists)"
-        else:
+        if force:
+            status = " (force recreate)"
             todo.append((src, dest))
+        else:
+            if is_symlink_exists(dest):
+                status = " (skip, already exists)"
+            else:
+                todo.append((src, dest))
 
         print(f"{src} -> {dest}{status}")
 
