@@ -1,0 +1,9 @@
+XDG_DATA_HOME     DEFAULT=@{HOME}/.local/share
+XDG_CONFIG_HOME   DEFAULT=@{HOME}/.config
+XDG_STATE_HOME    DEFAULT=@{HOME}/.local/state
+XDG_CACHE_HOME    DEFAULT=@{HOME}/.cache
+
+XDG_DATA_DIRS     DEFAULT=${PATH}:/usr/local/share/:/usr/share/
+XDG_DATA_DIRS     DEFAULT=${PATH}:/etc/xdg/
+
+PATH   DEFAULT=@{HOME}/.local/bin:@{PATH}
