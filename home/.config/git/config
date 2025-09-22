@@ -3,7 +3,6 @@
   email = viktor@ku.family
 [core]
   whitespace = trailing-space,space-before-tab
-  excludesfile = ~/global.gitignore
 [help]
   autocorrect = 25
 [alias]
