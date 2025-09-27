@@ -5,7 +5,7 @@ local function add(src, commit)
 end
 
 vim.pack.add({
-  add("https://github.com/nvim-treesitter/nvim-treesitter", "20fc6b1270dddff7e16220e0a51d17614d41fd43"),
+  add("https://github.com/nvim-treesitter/nvim-treesitter", "5a70b1eb8cbdf6c7f0a59dfb7356ad198421b620"),
 
   add("https://github.com/nyoom-engineering/oxocarbon.nvim", "9f85f6090322f39b11ae04a343d4eb9d12a86897"),
   add("https://github.com/HiPhish/rainbow-delimiters.nvim", "687ef75fdbd497eabc9eea92b52e7b4d403b3319"),
