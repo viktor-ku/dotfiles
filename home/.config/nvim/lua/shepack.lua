@@ -1,5 +1,8 @@
 local spec = require("shepack-utils")
 
+spec.one("plenary")
+spec.one("nvim-web-devicons")
+
 spec.mod("telescope")
 spec.mod("mini")
 
@@ -10,9 +13,7 @@ spec.one("gitsigns")
 spec.one("harpoon")
 spec.one("hop")
 spec.one("lualine")
-spec.one("nvim-web-devicons")
 spec.one("oil")
-spec.one("plenary")
 spec.one("rainbow-delimiters")
 spec.one("theme")
 spec.one("treesitter")

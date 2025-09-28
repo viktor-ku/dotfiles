@@ -292,7 +292,6 @@ end
 return {
   "nvim-telescope/telescope.nvim",
   commit = "b4da76be54691e854d3e0e02c36b0245f945c2c7",
-  requires = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-fzf-native.nvim" },
   config = function()
     local telescope = require("telescope")
 
