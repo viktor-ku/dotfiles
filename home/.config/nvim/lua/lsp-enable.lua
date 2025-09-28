@@ -1,0 +1,12 @@
+vim.lsp.enable({
+  "emmet",
+  "fish",
+  "lua",
+  "pyright",
+  "ruff",
+  "rust-analyzer",
+  "sqls",
+  "superhtml",
+  "tailwindcss",
+  "vtsls",
+})

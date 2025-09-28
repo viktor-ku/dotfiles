@@ -1,4 +1,20 @@
 return {
+  "hrsh7th/nvim-cmp",
+  commit = "b5311ab3ed9c846b585c0c15b7559be131ec4be9",
+  requires = {
+    {
+      "hrsh7th/cmp-path",
+      commit = "c642487086dbd9a93160e1679a1327be111cbc25",
+    },
+    {
+      "hrsh7th/cmp-buffer",
+      commit = "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
+    },
+    {
+      "hrsh7th/cmp-nvim-lsp",
+      commit = "bd5a7d6db125d4654b50eeae9f5217f24bb22fd3",
+    },
+  },
   config = function()
     local cmp = require("cmp")
 

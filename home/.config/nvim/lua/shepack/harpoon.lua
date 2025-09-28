@@ -35,6 +35,8 @@ function M.harpoon_item()
 end
 
 return {
+  "ThePrimeagen/harpoon",
+  commit = "ed1f853847ffd04b2b61c314865665e1dadf22c7",
   config = function()
     local harpoon = require("harpoon")
 
@@ -45,8 +47,7 @@ return {
         end,
       },
     })
-  end,
-  keys = function()
+
     vim.keymap.set("n", "<C-h>", function()
       require("harpoon"):list():select(1)
     end)
@@ -63,7 +64,6 @@ return {
     end)
 
     vim.keymap.set("n", "<leader>he", function()
-      local harpoon = require("harpoon")
       harpoon.ui:toggle_quick_menu(harpoon:list())
     end)
 

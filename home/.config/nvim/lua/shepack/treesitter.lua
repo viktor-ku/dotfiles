@@ -1,4 +1,7 @@
 return {
+  "nvim-treesitter/nvim-treesitter",
+  commit = "5a70b1eb8cbdf6c7f0a59dfb7356ad198421b620",
+  run = ":TSUpdate",
   config = function()
     require("nvim-treesitter").setup()
     require("nvim-treesitter").install({
@@ -73,6 +76,12 @@ return {
       "xml",
       "yaml",
     })
-    require("nvim-treesitter").update()
+
+    vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+      pattern = "*",
+      callback = function()
+        pcall(vim.treesitter.start)
+      end,
+    })
   end,
 }
