@@ -1,12 +1,13 @@
 [tools]
-node = "24"
-"npm:@vtsls/language-server" = "latest"
-"npm:@olrtg/emmet-language-server" = "latest"
-"npm:fish-lsp" = "latest"
-"npm:pyright" = "latest"
-"npm:@tailwindcss/language-server" = "latest"
-"npm:@crowdin/cli" = "latest"
-"go:github.com/sqls-server/sqls" = "latest"
+node = "24.9.0"
+"npm:@vtsls/language-server" = "0.2.9"
+"npm:@olrtg/emmet-language-server" = "2.8.0"
+"npm:fish-lsp" = "1.0.10"
+"npm:pyright" = "1.1.405"
+"npm:@tailwindcss/language-server" = "0.14.26"
+"npm:@crowdin/cli" = "4.11.0"
+"npm:eas-cli" = "16.19.3"
+"go:github.com/sqls-server/sqls" = "0.2.28"
 
 [settings]
 # configure `mise install` to always keep the downloaded archive
@@ -15,7 +16,8 @@ always_keep_install = false         # deleted on failure by default
 
 # config files with these prefixes will be trusted by default
 trusted_config_paths = [
-    '~/Code/Mine',
+  '~/Code/Mine',
+  '~/Code/My',
 ]
 
 verbose = false       # set to true to see full installation output, see `MISE_VERBOSE`
