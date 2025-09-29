@@ -5,6 +5,7 @@ node = "24"
 "npm:fish-lsp" = "latest"
 "npm:pyright" = "latest"
 "npm:@tailwindcss/language-server" = "latest"
+"npm:@crowdin/cli" = "latest"
 "go:github.com/sqls-server/sqls" = "latest"
 
 [settings]
