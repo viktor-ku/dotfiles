@@ -4,14 +4,12 @@ return {
   "smoka7/hop.nvim",
   commit = "707049feaca9ae65abb3696eff9aefc7879e66aa",
   config = function()
-    require("hop").setup()
+    require("hop").setup({
+      keys = "etovxqpdygfblzhckisuran",
+    })
 
     vim.keymap.set({ "n", "x", "o" }, "s", function()
-      require("flash").jump()
-    end)
-
-    vim.keymap.set({ "n", "x", "o" }, "S", function()
-      require("flash").treesitter()
+      require("hop").hint_char1()
     end)
   end,
 }

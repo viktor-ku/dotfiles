@@ -34,5 +34,9 @@ return {
         async = true,
       },
     })
+
+    vim.keymap.set("n", "<leader>W", function()
+      vim.cmd("noautocmd write")
+    end, { desc = "Save without formatting" })
   end,
 }
