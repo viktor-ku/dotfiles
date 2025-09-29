@@ -1,3 +1,6 @@
 [submodule "bin/neovim"]
   path = bin/neovim
   url = https://github.com/neovim/neovim.git
+[submodule "bin/cpuprincess"]
+	path = bin/cpuprincess
+	url = git@github.com:viktor-ku/cpuprincess.git
