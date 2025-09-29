@@ -1,5 +1,6 @@
 [tools]
 node = "24.9.0"
+
 "npm:@vtsls/language-server" = "0.2.9"
 "npm:@olrtg/emmet-language-server" = "2.8.0"
 "npm:fish-lsp" = "1.0.10"
@@ -8,8 +9,12 @@ node = "24.9.0"
 "npm:@crowdin/cli" = "4.11.0"
 "npm:eas-cli" = "16.19.3"
 "npm:@fsouza/prettierd" = "0.26.2"
-"go:github.com/sqls-server/sqls" = "0.2.28"
+
 "cargo:stylua" = "2.3.0"
+
+"go:github.com/sqls-server/sqls" = "0.2.28"
+
+"aqua:LuaLS/lua-language-server" = "3.15.0"
 
 [settings]
 # configure `mise install` to always keep the downloaded archive
