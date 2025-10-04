@@ -12,3 +12,5 @@ fish_add_path --append --path $ANDROID_HOME/tools
 if type -q zoxide
   zoxide init fish --cmd j | source
 end
+
+fish_add_path --append --path $HOME/.docker/bin
