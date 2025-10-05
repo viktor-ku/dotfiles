@@ -1,9 +1,10 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  commit = "5a70b1eb8cbdf6c7f0a59dfb7356ad198421b620",
+  commit = "01ced7499fb07f6c94abd316414ef198bd6e7058",
   run = ":TSUpdate",
   config = function()
     require("nvim-treesitter").setup()
+
     require("nvim-treesitter").install({
       "astro",
       "bash",
@@ -41,6 +42,7 @@ return {
       "json",
       "json5",
       "jsonc",
+      "kitty",
       "liquid",
       "llvm",
       "lua",
