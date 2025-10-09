@@ -1,0 +1,8 @@
+# this mise is for dotfiles itself
+
+[tasks.sync]
+description = "fetch latest main updates"
+run = [
+  "git fetch",
+  "git submodule update --init --recursive",
+]
