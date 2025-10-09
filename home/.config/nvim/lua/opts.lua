@@ -12,6 +12,7 @@ opt.hlsearch = false
 opt.cursorline = false
 opt.ruler = false
 opt.termguicolors = true
+opt.updatetime = 250
 opt.clipboard = "unnamedplus"
 opt.completeopt = { "menu", "menuone", "noselect", "fuzzy" }
 opt.expandtab = true
