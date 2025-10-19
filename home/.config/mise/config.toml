@@ -1,44 +1,44 @@
 [tools]
-node = "24.9.0"
+node = "22.20.0"
 
+# npm
+"npm:bun" = "1.3.0"
 "npm:@vtsls/language-server" = "0.2.9"
 "npm:@olrtg/emmet-language-server" = "2.8.0"
 "npm:fish-lsp" = "1.0.10"
 "npm:pyright" = "1.1.406"
 "npm:@tailwindcss/language-server" = "0.14.28"
-"npm:eas-cli" = "16.20.4"
+"npm:eas-cli" = "16.24.0"
 "npm:@fsouza/prettierd" = "0.26.2"
 
+# cargo
 "cargo:stylua" = "2.3.0"
 
+# go
 "go:github.com/sqls-server/sqls" = "0.2.28"
 
+# aqua
 "aqua:LuaLS/lua-language-server" = "3.15.0"
 
 [settings]
-# configure `mise install` to always keep the downloaded archive
 always_keep_download = false        # deleted after install by default
 always_keep_install = false         # deleted on failure by default
 
-# config files with these prefixes will be trusted by default
 trusted_config_paths = [
   '~/Code/Mine',
   '~/Code/My',
 ]
 
-verbose = false       # set to true to see full installation output, see `MISE_VERBOSE`
-http_timeout = "30s"  # set the timeout for http requests as duration string, see `MISE_HTTP_TIMEOUT`
-jobs = 8              # number of plugins or runtimes to install in parallel. The default is `4`.
-raw = true           # set to true to directly pipe plugins to stdin/stdout/stderr
-yes = false           # set to true to automatically answer yes to all prompts
+verbose = false
+http_timeout = "30s"
+jobs = 8
+raw = true
+yes = false
 
-not_found_auto_install = true # see MISE_NOT_FOUND_AUTO_INSTALL
-task_output = "interleave" # see Tasks Runner for more information
-paranoid = false       # see MISE_PARANOID
+not_found_auto_install = true
+task_output = "interleave"
+paranoid = false
 
-env_file = '.env' # load env vars from a dotenv file, see `MISE_ENV_FILE`
+experimental = true
 
-experimental = true # enable experimental features
-
-# configure messages displayed when entering directories with config files
 status = { missing_tools = "if_other_versions_installed", show_env = false, show_tools = false }
