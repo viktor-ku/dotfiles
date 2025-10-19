@@ -1,14 +1,5 @@
----@brief
---- https://github.com/tailwindlabs/tailwindcss-intellisense
----
---- Tailwind CSS Language Server can be installed via npm:
----
---- npm install -g @tailwindcss/language-server
-
----@type vim.lsp.Config
 return {
   cmd = { "tailwindcss-language-server", "--stdio" },
-  -- filetypes copied and adjusted from tailwindcss-intellisense
   filetypes = {
     -- html
     "aspnetcorerazor",
@@ -19,11 +10,11 @@ return {
     "django-html",
     "htmldjango",
     "edge",
-    "eelixir", -- vim ft
+    "eelixir",
     "elixir",
     "ejs",
     "erb",
-    "eruby", -- vim ft
+    "eruby",
     "gohtml",
     "gohtmltmpl",
     "haml",
