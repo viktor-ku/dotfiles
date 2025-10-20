@@ -1,0 +1,6 @@
+[Unit]
+Description=Random wallpaper setter
+
+[Service]
+Type=oneshot
+ExecStart=/home/victoria/.local/bin/wallthis.py /home/victoria/Pictures/Wallpapers
