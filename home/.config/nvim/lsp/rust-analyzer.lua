@@ -30,7 +30,7 @@ local function is_library(fname)
 end
 
 return {
-  cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+  cmd = { "rust-analyzer" },
   filetypes = { "rust" },
   settings = {
     ["rust-analyzer"] = {
