@@ -1,8 +1,6 @@
--- Specify your plugin according to this spec:
--- https://github.com/lewis6991/pckr.nvim?tab=readme-ov-file#specifying-plugins
 return {
   "folke/which-key.nvim",
-  commit = "904308e6885bbb7b60714c80ab3daf0c071c1492",
+  commit = "b4177e3eaf15fe5eb8357ebac2286d488be1ed00",
   config = function()
     require("which-key").setup({
       delay = 500,

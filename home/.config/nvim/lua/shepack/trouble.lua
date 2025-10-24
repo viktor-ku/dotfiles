@@ -1,8 +1,6 @@
--- Specify your plugin according to this spec:
--- https://github.com/lewis6991/pckr.nvim?tab=readme-ov-file#specifying-plugins
 return {
   "folke/trouble.nvim",
-  commit = "f176232e7759c4f8abd923c21e3e5a5c76cd6837",
+  commit = "76030c5542c5d132aeeb467ca0ab370f3f79a697",
   config = function()
     require("trouble").setup({
       auto_close = true,

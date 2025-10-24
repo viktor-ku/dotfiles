@@ -113,12 +113,9 @@ local opts = {
   end,
 }
 
---
--- Specify your plugin according to this spec:
--- https://github.com/lewis6991/pckr.nvim?tab=readme-ov-file#specifying-plugins
 return {
   "lewis6991/gitsigns.nvim",
-  commit = "23ae90a2a52fdc9b8c50dc61d6c30ebb18521343",
+  commit = "20ad4419564d6e22b189f6738116b38871082332",
   config = function()
     require("gitsigns").setup(opts)
   end,

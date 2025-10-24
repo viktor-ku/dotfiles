@@ -1,6 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
-  commit = "b5311ab3ed9c846b585c0c15b7559be131ec4be9",
+  commit = "a7bcf1d88069fc67c9ace8a62ba480b8fe879025",
   requires = {
     {
       "hrsh7th/cmp-path",

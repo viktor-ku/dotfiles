@@ -9,7 +9,7 @@ end
 
 return {
   "stevearc/oil.nvim",
-  commit = "07f80ad645895af849a597d1cac897059d89b686",
+  commit = "7e1cd7703ff2924d7038476dcbc04b950203b902",
   config = function()
     require("oil").setup({
       default_file_explorer = true,

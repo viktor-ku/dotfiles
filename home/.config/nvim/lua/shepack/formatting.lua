@@ -1,6 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  commit = "fbcb4fa7f34bfea9be702ffff481a8e336ebf6ed",
+  commit = "9fd3d5e0b689ec1bf400c53cbbec72c6fdf24081",
   config = function()
     local prettier = { "prettierd", "prettier", stop_after_first = true }
 

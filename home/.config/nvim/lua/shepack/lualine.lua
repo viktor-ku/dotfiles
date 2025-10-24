@@ -1,6 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
-  commit = "b8c23159c0161f4b89196f74ee3a6d02cdc3a955",
+  commit = "3946f0122255bc377d14a59b27b609fb3ab25768",
   config = function()
     require("lualine").setup({
       options = {
