@@ -4,3 +4,6 @@
 [submodule "bin/cpuprincess"]
 	path = bin/cpuprincess
 	url = git@github.com:viktor-ku/cpuprincess.git
+[submodule "bin/rust-analyzer"]
+	path = bin/rust-analyzer
+	url = https://github.com/rust-lang/rust-analyzer.git

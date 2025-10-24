@@ -1,8 +1,22 @@
-# this mise is for dotfiles itself
-
-[tasks.sync]
-description = "fetch latest main updates"
+[tasks.fetch]
 run = [
-  "git fetch",
+  "git fetch -p",
+  "git rebase origin/main",
   "git submodule update --init --recursive",
+]
+
+[tasks."install:neovim"]
+run = [
+  "cd ./bin/neovim && sudo make install"
+]
+
+[tasks."install:cpuprincess"]
+run = [
+  "cargo install --path ./bin/cpuprincess"
+]
+
+[tasks."install:rust-analyzer"]
+run = [
+  "cd ./bin/rust-analyzer && cargo build --release --package rust-analyzer",
+  "sudo ln -sf $(pwd)/bin/rust-analyzer/target/release/rust-analyzer /usr/local/bin/rust-analyzer",
 ]
