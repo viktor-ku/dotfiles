@@ -9,7 +9,7 @@ rust = "1.90.0"
 "npm:fish-lsp" = "1.0.10"
 "npm:pyright" = "1.1.406"
 "npm:@tailwindcss/language-server" = "0.14.28"
-"npm:eas-cli" = "16.24.0"
+"npm:eas-cli" = "16.24.1"
 "npm:@fsouza/prettierd" = "0.26.2"
 
 # cargo
