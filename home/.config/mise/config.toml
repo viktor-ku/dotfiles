@@ -5,6 +5,8 @@ rust = "1.91.0"
 "npm:@sveltejs/mcp" = "0.1.11"
 
 # npm
+
+# npm
 "npm:@vtsls/language-server" = "0.2.9"
 "npm:@olrtg/emmet-language-server" = "2.8.0"
 "npm:fish-lsp" = "1.0.10"
