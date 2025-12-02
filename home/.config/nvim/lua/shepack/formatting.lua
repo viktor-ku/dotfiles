@@ -3,7 +3,12 @@ return {
   "stevearc/conform.nvim",
   commit = "4993e07fac6679d0a5005aa7499e0bad2bd39f19",
   config = function()
-    local prettier = { "prettierd", "prettier", stop_after_first = true }
+    local prettier = {
+      "biome",
+      "prettierd",
+      "prettier",
+      stop_after_first = true,
+    }
 
     require("conform").setup({
       formatters_by_ft = {

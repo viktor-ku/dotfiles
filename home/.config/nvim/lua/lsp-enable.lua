@@ -9,4 +9,6 @@ vim.lsp.enable({
   "superhtml",
   "tailwindcss",
   "vtsls",
+  "biome",
+  "astro",
 })
