@@ -1,6 +1,6 @@
 return {
   "folke/trouble.nvim",
-  commit = "76030c5542c5d132aeeb467ca0ab370f3f79a697",
+  commit = "bd67efe408d4816e25e8491cc5ad4088e708a69a",
   config = function()
     require("trouble").setup({
       auto_close = true,

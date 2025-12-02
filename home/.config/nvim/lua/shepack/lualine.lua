@@ -1,6 +1,7 @@
+-- https://github.com/nvim-lualine/lualine.nvim/commits/master/
 return {
   "nvim-lualine/lualine.nvim",
-  commit = "3946f0122255bc377d14a59b27b609fb3ab25768",
+  commit = "47f91c416daef12db467145e16bed5bbfe00add8",
   config = function()
     require("lualine").setup({
       options = {

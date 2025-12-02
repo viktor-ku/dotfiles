@@ -7,9 +7,10 @@ local function keys()
   end)
 end
 
+-- https://github.com/stevearc/oil.nvim/commits/master
 return {
   "stevearc/oil.nvim",
-  commit = "7e1cd7703ff2924d7038476dcbc04b950203b902",
+  commit = "cbcb3f997f6f261c577b943ec94e4ef55108dd95",
   config = function()
     require("oil").setup({
       default_file_explorer = true,

@@ -1,6 +1,7 @@
+-- https://github.com/hrsh7th/nvim-cmp/commits/main/
 return {
   "hrsh7th/nvim-cmp",
-  commit = "a7bcf1d88069fc67c9ace8a62ba480b8fe879025",
+  commit = "d97d85e01339f01b842e6ec1502f639b080cb0fc",
   requires = {
     {
       "hrsh7th/cmp-path",
@@ -10,9 +11,11 @@ return {
       "hrsh7th/cmp-buffer",
       commit = "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
     },
+
+    -- https://github.com/hrsh7th/cmp-nvim-lsp/commits/main/
     {
       "hrsh7th/cmp-nvim-lsp",
-      commit = "bd5a7d6db125d4654b50eeae9f5217f24bb22fd3",
+      commit = "cbc7b02bb99fae35cb42f514762b89b5126651ef",
     },
   },
   config = function()

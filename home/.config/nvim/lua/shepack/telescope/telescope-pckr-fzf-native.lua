@@ -1,5 +1,6 @@
+-- https://github.com/nvim-telescope/telescope-fzf-native.nvim/commits/main/
 return {
   "nvim-telescope/telescope-fzf-native.nvim",
-  commit = "1f08ed60cafc8f6168b72b80be2b2ea149813e55",
+  commit = "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c",
   run = "make",
 }

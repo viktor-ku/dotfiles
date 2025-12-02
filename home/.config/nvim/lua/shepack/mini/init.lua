@@ -1,7 +1,8 @@
+-- https://github.com/nvim-mini/mini.nvim/commits/main/
 return {
   {
     "nvim-mini/mini.nvim",
-    commit = "d1a91582bf2d16026ae84292874c70fb2d0ffe42",
+    commit = "dca98843fab66d080779cd973e7139e258ff164c",
     config = function()
       require("shepack/mini/indentscope")
       require("shepack/mini/pairs")

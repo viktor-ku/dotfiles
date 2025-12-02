@@ -1,6 +1,6 @@
 return {
   "folke/which-key.nvim",
-  commit = "b4177e3eaf15fe5eb8357ebac2286d488be1ed00",
+  commit = "3aab2147e74890957785941f0c1ad87d0a44c15a",
   config = function()
     require("which-key").setup({
       delay = 500,

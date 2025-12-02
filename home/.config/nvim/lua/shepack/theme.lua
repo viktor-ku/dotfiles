@@ -12,6 +12,8 @@ return {
   "nyoom-engineering/oxocarbon.nvim",
   commit = "9f85f6090322f39b11ae04a343d4eb9d12a86897",
   config = function()
+    my_touch()
+
     vim.api.nvim_create_autocmd("ColorScheme", {
       callback = function()
         my_touch()
