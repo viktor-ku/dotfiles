@@ -7,7 +7,8 @@ run = [
 
 [tasks."install:neovim"]
 run = [
-  "cd ./bin/neovim && sudo make install"
+  "cd ./bin/neovim && sudo rm -rf .deps build",
+  "cd ./bin/neovim && make CMAKE_BUILD_TYPE=Release && sudo make install",
 ]
 
 [tasks."install:cpuprincess"]
