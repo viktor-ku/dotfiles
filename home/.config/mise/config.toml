@@ -13,6 +13,7 @@ rust = "1.91.0"
 "npm:@tailwindcss/language-server" = "0.14.28"
 "npm:eas-cli" = "16.24.1"
 "npm:@fsouza/prettierd" = "0.26.2"
+"npm:@shopify/cli" = "3.88.0"
 
 # cargo
 "cargo:stylua" = "2.3.0"
