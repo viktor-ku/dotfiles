@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  commit = "00c906abb9550e72bc0c640545b5499b9525bb40",
+  commit = "4fc09bee78e91bf4ba471cdab4bf9dfa37fde51c",
   run = ":TSUpdate",
   config = function()
     require("nvim-treesitter").setup()
@@ -58,6 +58,7 @@ return {
       "pug",
       "pymanifest",
       "python",
+      "proto",
       "rasi",
       "requirements",
       "rust",

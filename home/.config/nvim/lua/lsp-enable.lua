@@ -11,4 +11,5 @@ vim.lsp.enable({
   "vtsls",
   "biome",
   "astro",
+  "proto",
 })
