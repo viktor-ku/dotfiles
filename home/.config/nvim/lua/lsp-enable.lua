@@ -12,5 +12,6 @@ vim.lsp.enable({
   "biome",
   "astro",
   "cssmodules",
+  "css",
   "proto",
 })
