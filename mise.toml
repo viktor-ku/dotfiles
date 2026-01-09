@@ -20,6 +20,7 @@ run = [
 run = [
   "cd ./bin/rust-analyzer && cargo build --release --package rust-analyzer",
   "sudo ln -sf $(pwd)/bin/rust-analyzer/target/release/rust-analyzer /usr/local/bin/rust-analyzer",
+  "rm -f ~/.cargo/bin/rust-analyzer"
 ]
 
 [tasks."install:all"]
