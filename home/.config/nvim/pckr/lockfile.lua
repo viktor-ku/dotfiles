@@ -15,10 +15,10 @@ return {
   ["https://github.com/nvim-telescope/telescope-fzf-native.nvim"] = { commit = "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c" },
   ["https://github.com/nvim-telescope/telescope.nvim"] = { commit = "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2" },
   ["https://github.com/nvim-tree/nvim-web-devicons"] = { commit = "8dcb311b0c92d460fac00eac706abd43d94d68af" },
-  ["https://github.com/nvim-treesitter/nvim-treesitter"] = { commit = "4fc09bee78e91bf4ba471cdab4bf9dfa37fde51c" },
-  ["https://github.com/nyoom-engineering/oxocarbon.nvim"] = { commit = "9f85f6090322f39b11ae04a343d4eb9d12a86897" },
+  ["https://github.com/nvim-treesitter/nvim-treesitter"] = { commit = "2ba5ec184609a96b513bf4c53a20512d64e27f39" },
   ["https://github.com/saecki/crates.nvim"] = { commit = "ac9fa498a9edb96dc3056724ff69d5f40b898453" },
   ["https://github.com/smoka7/hop.nvim"] = { commit = "707049feaca9ae65abb3696eff9aefc7879e66aa" },
   ["https://github.com/stevearc/conform.nvim"] = { commit = "4993e07fac6679d0a5005aa7499e0bad2bd39f19" },
   ["https://github.com/stevearc/oil.nvim"] = { commit = "cbcb3f997f6f261c577b943ec94e4ef55108dd95" },
+  ["https://github.com/tinted-theming/tinted-nvim"] = { commit = "0347c54827694e85f4880233eefd71be3978e439" },
 }
