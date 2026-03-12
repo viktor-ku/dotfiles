@@ -10,7 +10,6 @@ return {
   ["https://github.com/hrsh7th/nvim-cmp"] = { commit = "d97d85e01339f01b842e6ec1502f639b080cb0fc" },
   ["https://github.com/lewis6991/gitsigns.nvim"] = { commit = "5813e4878748805f1518cee7abb50fd7205a3a48" },
   ["https://github.com/nvim-lua/plenary.nvim"] = { commit = "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
-  ["https://github.com/nvim-lualine/lualine.nvim"] = { commit = "47f91c416daef12db467145e16bed5bbfe00add8" },
   ["https://github.com/nvim-mini/mini.nvim"] = { commit = "dca98843fab66d080779cd973e7139e258ff164c" },
   ["https://github.com/nvim-telescope/telescope-fzf-native.nvim"] = { commit = "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c" },
   ["https://github.com/nvim-telescope/telescope.nvim"] = { commit = "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2" },
@@ -20,5 +19,5 @@ return {
   ["https://github.com/smoka7/hop.nvim"] = { commit = "707049feaca9ae65abb3696eff9aefc7879e66aa" },
   ["https://github.com/stevearc/conform.nvim"] = { commit = "4993e07fac6679d0a5005aa7499e0bad2bd39f19" },
   ["https://github.com/stevearc/oil.nvim"] = { commit = "cbcb3f997f6f261c577b943ec94e4ef55108dd95" },
-  ["https://github.com/tinted-theming/tinted-nvim"] = { commit = "0347c54827694e85f4880233eefd71be3978e439" },
+  ["https://github.com/tinted-theming/tinted-nvim"] = { commit = "aae5d90cf4821d550130ffc2107de903a07a582f" },
 }
