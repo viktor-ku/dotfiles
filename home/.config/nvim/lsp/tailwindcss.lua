@@ -87,6 +87,7 @@ return {
         invalidTailwindDirective = "error",
         recommendedVariantOrder = "warning",
       },
+      classFunctions = { "cva", "cx" },
       classAttributes = {
         "class",
         "className",
