@@ -1,15 +1,15 @@
 [tools]
-node = "25.3.0"
+node = "25.8.2"
 rust = "1.92.0"
-bun = "1.3.6"
+bun = "1.3.11"
 
 # npm
-"npm:lefthook" = "2.0.15"
-"npm:@biomejs/biome" = "2.3.11"
+"npm:lefthook" = "2.1.4"
+"npm:@biomejs/biome" = "2.4.9"
 "npm:cssmodules-language-server" = "1.5.2"
 "npm:vscode-css-languageservice" = "6.3.9"
 "npm:@astrojs/language-server" = "2.16.3"
-"npm:@vtsls/language-server" = "0.3.0"
+"npm:typescript-language-server" = "5.1.3"
 "npm:@olrtg/emmet-language-server" = "2.8.0"
 "npm:fish-lsp" = "1.1.3"
 "npm:pyright" = "1.1.408"
