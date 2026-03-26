@@ -116,7 +116,7 @@ local opts = {
 -- https://github.com/lewis6991/gitsigns.nvim/commits/main/
 return {
   "lewis6991/gitsigns.nvim",
-  commit = "5813e4878748805f1518cee7abb50fd7205a3a48",
+  commit = "a462f416e2ce4744531c6256252dee99a7d34a83",
   config = function()
     require("gitsigns").setup(opts)
   end,

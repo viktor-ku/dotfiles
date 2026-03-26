@@ -1,7 +1,7 @@
 -- https://github.com/nvim-tree/nvim-web-devicons
 return {
   "nvim-tree/nvim-web-devicons",
-  commit = "8dcb311b0c92d460fac00eac706abd43d94d68af",
+  commit = "d7462543c9e366c0d196c7f67a945eaaf5d99414",
   config = function()
     require("nvim-web-devicons").setup({})
   end,

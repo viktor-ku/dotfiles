@@ -292,7 +292,7 @@ end
 -- https://github.com/nvim-telescope/telescope.nvim/commits/master/
 return {
   "nvim-telescope/telescope.nvim",
-  commit = "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2",
+  commit = "5255aa27c422de944791318024167ad5d40aad20",
   config = function()
     local telescope = require("telescope")
 

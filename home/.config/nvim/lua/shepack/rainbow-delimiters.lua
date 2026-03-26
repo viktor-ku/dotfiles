@@ -1,6 +1,6 @@
 return {
   "hiphish/rainbow-delimiters.nvim",
-  commit = "8aafe2cbd89cd4090f573a98cab6b20366576fde",
+  commit = "50080ed0f44dbc18ae13b81278a01b951a06127a",
   config = function()
     require("rainbow-delimiters.setup").setup({})
   end,

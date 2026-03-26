@@ -1,7 +1,7 @@
 -- https://github.com/hrsh7th/nvim-cmp/commits/main/
 return {
   "hrsh7th/nvim-cmp",
-  commit = "d97d85e01339f01b842e6ec1502f639b080cb0fc",
+  commit = "a1d504892f2bc56c2e79b65c6faded2fd21f3eca",
   requires = {
     {
       "hrsh7th/cmp-path",

@@ -10,7 +10,7 @@ end
 -- https://github.com/stevearc/oil.nvim/commits/master
 return {
   "stevearc/oil.nvim",
-  commit = "cbcb3f997f6f261c577b943ec94e4ef55108dd95",
+  commit = "0fcc83805ad11cf714a949c98c605ed717e0b83e",
   config = function()
     require("oil").setup({
       default_file_explorer = true,

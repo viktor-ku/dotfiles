@@ -1,7 +1,7 @@
 -- https://github.com/stevearc/conform.nvim/commits/master/
 return {
   "stevearc/conform.nvim",
-  commit = "4993e07fac6679d0a5005aa7499e0bad2bd39f19",
+  commit = "086a40dc7ed8242c03be9f47fbcee68699cc2395",
   config = function()
     local prettier = {
       "biome",
