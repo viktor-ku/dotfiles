@@ -14,7 +14,7 @@ return {
   ["https://github.com/nvim-telescope/telescope-fzf-native.nvim"] = { commit = "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c" },
   ["https://github.com/nvim-telescope/telescope.nvim"] = { commit = "5255aa27c422de944791318024167ad5d40aad20" },
   ["https://github.com/nvim-tree/nvim-web-devicons"] = { commit = "d7462543c9e366c0d196c7f67a945eaaf5d99414" },
-  ["https://github.com/nvim-treesitter/nvim-treesitter"] = { commit = "6620ae1c44dfa8623b22d0cbf873a9e8d073b849" },
+  ["https://github.com/nvim-treesitter/nvim-treesitter"] = { commit = "539abf6da5ee8702e37b82cc953131dadd570da2" },
   ["https://github.com/saecki/crates.nvim"] = { commit = "ac9fa498a9edb96dc3056724ff69d5f40b898453" },
   ["https://github.com/smoka7/hop.nvim"] = { commit = "707049feaca9ae65abb3696eff9aefc7879e66aa" },
   ["https://github.com/stevearc/conform.nvim"] = { commit = "086a40dc7ed8242c03be9f47fbcee68699cc2395" },
