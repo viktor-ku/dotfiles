@@ -14,4 +14,5 @@ vim.lsp.enable({
   "cssmodules",
   "css",
   "proto",
+  "clangd",
 })
